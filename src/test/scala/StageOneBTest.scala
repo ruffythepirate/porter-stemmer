@@ -3,11 +3,16 @@ package io.ruffy.porterstemmer
 import org.scalatest.{FlatSpec, MustMatchers}
 
 
-class StageOneBTest extends FlatSpec with MustMatchers{
+class StageOneBTest extends FlatSpec with MustMatchers {
 
   val stageOneBTestCases = Seq(
     ("feed", "feed"),
-    ("agreed", "agree")
+    ("agreed", "agree"),
+    ("plastered", "plaster"),
+    ("bled", "bled"),
+    ("motoring", "motor"),
+    ("sing", "sing")
+
   )
 
   stageOneBTestCases.foreach(test => {

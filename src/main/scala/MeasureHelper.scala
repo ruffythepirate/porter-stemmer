@@ -30,6 +30,11 @@ object MeasureHelper {
   }
 
   val PURE_VOWELS = Seq('a', 'e', 'i', 'o', 'u')
+  val POTENTIAL_VOWELS = PURE_VOWELS ++ Seq('y')
+
+  def wordContainsVowel(word: String): Boolean = {
+    word.toLowerCase.find(letter => POTENTIAL_VOWELS.contains(letter)) != None
+  }
 
   private def isVowel(letter: Char, previousLetter: Char) = {
     if (letter == 'y')
