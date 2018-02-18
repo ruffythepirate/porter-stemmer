@@ -2,7 +2,7 @@ package io.ruffy.porterstemmer
 
 import org.scalatest.{FlatSpec, MustMatchers}
 
-class PorterStemmerTest extends FlatSpec with MustMatchers{
+class StageOneATest extends FlatSpec with MustMatchers{
 
 
   val stageOneATestCases = Seq(
@@ -11,7 +11,6 @@ class PorterStemmerTest extends FlatSpec with MustMatchers{
     ("caress", "caress"),
     ("cats", "cat")
   )
-
 
   stageOneATestCases.foreach(test => {
     it should s"transform ${test._1} -> ${test._2}" in {

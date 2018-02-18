@@ -11,4 +11,11 @@ object PorterStemmer {
       case _ => word
     }
   }
+
+  def stageOneB(word: String) = {
+    word match {
+      case s if s.endsWith("eed") && MeasureHelper.determineMeasure(word.dropRight(3)) > 0  => s.dropRight(1)
+      case s => s
+    }
+  }
 }
