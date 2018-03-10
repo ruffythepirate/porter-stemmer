@@ -11,7 +11,17 @@ class StageOneBTest extends FlatSpec with MustMatchers {
     ("plastered", "plaster"),
     ("bled", "bled"),
     ("motoring", "motor"),
-    ("sing", "sing")
+    ("sing", "sing"),
+    ("conflated", "conflate"),
+    ("troubled", "trouble"),
+    ("sized", "size"),
+    ("hopping", "hop"),
+    ("tanned", "tan"),
+    ("falling", "fall"),
+    ("hissing", "hiss"),
+    ("fizzing", "fizz"),
+    ("failing", "fail"),
+    ("filing", "file")
 
   )
 

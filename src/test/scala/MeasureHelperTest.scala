@@ -36,4 +36,17 @@ class MeasureHelperTest extends FlatSpec with MustMatchers{
     }
   })
 
+  val endsWithTwoConsonants = Seq(
+    ("Blall", true),
+    ("Wall", true),
+    ("Grr", true),
+    ("Gram", false),
+    ("Blues", false)
+  )
+
+  endsWithTwoConsonants.foreach(test => {
+    it should s"Say EndsWithTwoConsonants ${test._2} for ${test._1}" in {
+      MeasureHelper.endsWithDoubleConsonant(test._1) must equal(test._2)
+    }
+  })
 }
