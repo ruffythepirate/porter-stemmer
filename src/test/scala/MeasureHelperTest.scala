@@ -49,4 +49,32 @@ class MeasureHelperTest extends FlatSpec with MustMatchers{
       MeasureHelper.endsWithDoubleConsonant(test._1) must equal(test._2)
     }
   })
+
+  val isConsonantTests = Seq(
+    ("Hello", 0, true),
+    ("Hello", 1, false),
+    ("Yellow", 0, true),
+    ("Belly", 4, false)
+  )
+
+  isConsonantTests.foreach(test => {
+    it should s"Say is Consonant ${test._3} for ${test._1} index ${test._2}" in {
+      MeasureHelper.isConsonant(test._1, test._2) must equal(test._3)
+    }
+    it should s"Say is Vowel ${!test._3} for ${test._1} index ${test._2}" in {
+      MeasureHelper.isVowel(test._1, test._2) must equal(!test._3)
+    }
+  })
+
+  val isStarOTests = Seq(
+    ("Fail", false),
+    ("Fil", true),
+    ("Fax", false)
+  )
+
+  isStarOTests.foreach(test => {
+    it should s"Say starO = ${test._2} for ${test._1}" in {
+      MeasureHelper.isAStarOWord(test._1) must equal(test._2)
+    }
+  })
 }
