@@ -27,6 +27,14 @@ object PorterStemmer {
     }
   }
 
+  def stageOneC(word: String) = {
+    word match {
+      case s if s.last == 'y' && MeasureHelper.wordContainsVowel(s.dropRight(1))
+        => s.dropRight(1) + 'i'
+      case s => s
+    }
+  }
+
   val NON_APPLIED_DOUBLE_CONSONANTS = Seq('l', 's', 'z')
 
   private def stageOneBOnSecondOrThirdTrigger(word: String) = {
