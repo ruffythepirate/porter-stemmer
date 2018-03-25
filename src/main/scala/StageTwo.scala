@@ -1,6 +1,6 @@
 package io.ruffy.porterstemmer
 
-object StageTwo {
+object StageTwo extends MeasureFunctionality {
  def transform(word: String) = {
     val measure = MeasureHelper.determineMeasure(word)
     word match {
@@ -28,7 +28,5 @@ object StageTwo {
     }
   }
 
-  private def endsWithAndHasMeasureBiggerThanZero(word:String, ending: String) = {
-    word.endsWith(ending) && MeasureHelper.determineMeasure(word.dropRight(ending.length)) > 0
-  }
+
 }
