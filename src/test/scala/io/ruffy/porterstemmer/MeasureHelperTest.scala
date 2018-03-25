@@ -1,4 +1,5 @@
 package io.ruffy.porterstemmer
+
 import org.scalatest.{FlatSpec, MustMatchers}
 
 class MeasureHelperTest extends FlatSpec with MustMatchers{

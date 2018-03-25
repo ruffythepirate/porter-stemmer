@@ -1,4 +1,5 @@
-import io.ruffy.porterstemmer.MeasureFunctionality
+package io.ruffy.porterstemmer
+
 import org.scalatest.{FlatSpec, MustMatchers}
 
 
