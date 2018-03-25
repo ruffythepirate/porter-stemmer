@@ -27,7 +27,7 @@ class StageOneBTest extends FlatSpec with MustMatchers {
 
   stageOneBTestCases.foreach(test => {
     it should s"transform ${test._1} -> ${test._2}" in {
-      PorterStemmer.stageOneB(test._1) must equal(test._2)
+      StageOneB.transform(test._1) must equal(test._2)
     }
   })
 
