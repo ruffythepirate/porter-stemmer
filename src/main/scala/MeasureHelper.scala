@@ -2,6 +2,12 @@ package io.ruffy.porterstemmer
 
 object MeasureHelper {
 
+  /**
+    * Detmines m in the following formular, where C is any number of consecutive Consonants, and V is any number
+    * of consecutive Vowels. [C](VC){m}[V]
+    * @param word The word that we should get the measure for.
+    * @return m from the formula mentioned.
+    */
   def determineMeasure(word: String): Int = {
     case class DetermineState(changeFromVowelCount: Int, lastLetter: Option[Char], lastLetterWasVowel: Boolean)
 

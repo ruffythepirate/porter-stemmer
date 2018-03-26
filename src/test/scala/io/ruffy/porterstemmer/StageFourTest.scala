@@ -18,18 +18,31 @@ class StageFourTest extends FlatSpec with MustMatchers{
     ("adjustable","adjust"),
     ("capable","capable"),
     ("defensible","defens"),
+    ("audible","audible"),
     ("irritant","irrit"),
+    ("blatant","blatant"),
     ("replacement","replac"),
+    ("cement","cement"),
     ("adjustment","adjust"),
+    ("lament","lament"),
     ("dependent","depend"),
+    ("parent","parent"),
     ("adoption","adopt"),
+    ("orion","orion"),
     ("homologou","homolog"),
+    ("milou","milou"),
     ("communism","commun"),
+    ("purism","purism"),
     ("activate","activ"),
+    ("relate","relate"),
     ("angulariti","angular"),
+    ("tahiti","tahiti"),
     ("homologous","homolog"),
+    ("porous","porous"),
     ("effective","effect"),
-    ("bowdlerize","bowdler")  
+    ("alive","alive"),
+    ("bowdlerize","bowdler"),
+    ("theorize","theorize")
   )
 
   testCases.foreach( testCase => {
