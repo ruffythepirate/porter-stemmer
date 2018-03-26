@@ -23,6 +23,7 @@ class MeasureHelperTest extends FlatSpec with MustMatchers{
     }
   })
 
+
   val containsVowelTests = Seq(
     ("Hey", true),
     ("I", true),

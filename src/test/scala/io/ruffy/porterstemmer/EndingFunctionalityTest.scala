@@ -1,4 +1,6 @@
-import org.scalatest.{FlatSpec, FunSuite, MustMatchers}
+package io.ruffy.porterstemmer
+
+import org.scalatest.{FlatSpec, MustMatchers}
 
 class EndingFunctionalityTest extends FlatSpec with MustMatchers {
 

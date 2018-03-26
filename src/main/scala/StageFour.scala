@@ -1,6 +1,6 @@
 package io.ruffy.porterstemmer
 
-object StageFour extends MeasureFunctionality {
+object StageFour extends MeasureFunctionality with EndingFunctionality {
 
   def transform(word: String): String = {
     word match {
@@ -15,7 +15,7 @@ object StageFour extends MeasureFunctionality {
       case s if endsWithAndHasMeasureBiggerThanOne(word, "ement") => s.dropRight(5)
       case s if endsWithAndHasMeasureBiggerThanOne(word, "ment") => s.dropRight(4)
       case s if endsWithAndHasMeasureBiggerThanOne(word, "ent") => s.dropRight(3)
-      case s if endsWithAndHasMeasureBiggerThanOne(word, "ion") => s.dropRight(3)
+      case s if endsWithAndHasMeasureBiggerThanOne(word, "ion") && stemEndsWith(word, 3, "st") => s.dropRight(3)
       case s if endsWithAndHasMeasureBiggerThanOne(word, "ou") => s.dropRight(2)
       case s if endsWithAndHasMeasureBiggerThanOne(word, "ism") => s.dropRight(3)
       case s if endsWithAndHasMeasureBiggerThanOne(word, "ate") => s.dropRight(3)

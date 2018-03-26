@@ -1,3 +1,4 @@
+package io.ruffy.porterstemmer
 
 trait EndingFunctionality {
 
