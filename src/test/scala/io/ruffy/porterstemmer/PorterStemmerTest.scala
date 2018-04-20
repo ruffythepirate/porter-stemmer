@@ -9,7 +9,9 @@ class PorterStemmerTest extends FlatSpec with MustMatchers {
     ("think", "think"),
     ("weakness", "weak"),
     ("yields", "yield"),
-    ("temptation", "temptat")
+    ("temptation", "temptat"),
+    ("", ""),
+    (null, null)
   )
 
   testCases.foreach( testCase => {
